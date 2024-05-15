@@ -94,13 +94,15 @@ header nav ul li a:hover {
     max-width: 1400px;
     display: flex;
     align-items: center;
-    padding: 13%;
     margin: 0 auto;
+    padding-top: 13%;
+    padding-bottom: 13%;
     position: relative;
 }
 
 .hero-text-content {
     color: #ffff;
+    padding-left: 20px;
 }
 
 .hero-text-content p {
@@ -334,6 +336,11 @@ header nav ul li a:hover {
     header nav ul {
         font-size: 0.9rem;
         gap: 15px;
+    }
+
+    .hero-container {
+        padding-top: 45%;
+        padding-bottom: 45%;
     }
 
     .hero-text-content p {
