@@ -9,10 +9,10 @@ body {
     overflow-x: hidden;
 }
 
-/*
+
 button {
     font-family: 'Roboto', sans-serif;
-}*/
+}
 
 .header-container {
     max-width: 1400px;
@@ -240,7 +240,7 @@ header nav ul li a:hover {
     background-color: #d33f9a;
 }
 
-/*
+
 #property-type-section {
     background-color: #ebe7f3;
 }
@@ -329,7 +329,7 @@ header nav ul li a:hover {
     color: #303030;
     font-size: 1.1rem;
 }
-*/
+
 @media screen and (max-width: 933px) {
     header nav ul {
         font-size: 0.9rem;
@@ -348,7 +348,10 @@ header nav ul li a:hover {
         background-position: center;
     }
 
-    /*
+    .property-type-item img {
+        width: 36%;
+    }
+
     .property-type-text {
         width: 100%;
     }
@@ -370,7 +373,7 @@ header nav ul li a:hover {
         align-items: center;
         text-align: center;
     }
-    */
+
 }
 
 @media screen and (max-width: 768px) {
