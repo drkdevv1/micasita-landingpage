@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 html,
 body {
@@ -148,7 +148,7 @@ header nav ul li a:hover {
     text-align: center;
     padding: 30px 0;
     color: #d854a5;
-    font-size: 24px;
+    font-size: 1.8rem;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -171,6 +171,12 @@ header nav ul li a:hover {
     text-align: center;
     margin-top: 50px;
     margin-bottom: 50px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.property:hover {
+    transform: scale(1.05);
 }
 
 .property h3 {
@@ -279,6 +285,7 @@ header nav ul li a:hover {
     margin-top: 50px;
     margin-bottom: 50px;
     gap: 1.1vw;
+
 }
 
 .property-type-item {
@@ -287,7 +294,12 @@ header nav ul li a:hover {
     background-color: #ffffff;
     border-radius: 20px;
     text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
 
+.property-type-item:hover {
+    transform: scale(1.05);
 }
 
 .property-type-item img {
@@ -297,6 +309,11 @@ header nav ul li a:hover {
     border: #34216b 3px solid;
     border-radius: 50%;
     object-fit: cover;
+}
+
+.property-type-item h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
 }
 
 .property-type-item button {
@@ -330,6 +347,465 @@ header nav ul li a:hover {
     font-family: 'Poppins', sans-serif;
     color: #303030;
     font-size: 1.1rem;
+}
+
+#locations-section {
+    background-color: #34216b;
+}
+
+.locations-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 60px;
+}
+
+
+.location-title-content {
+    text-align: center;
+    padding: 2px 0;
+    color: #ffff;
+    font-size: 2rem;
+}
+
+.location-title-content h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.locations-items-container {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(2, 250px);
+    grid-gap: 16px;
+    grid-template-areas:
+        "lima piura junin junin"
+        "chiclayo chiclayo cusco arequipa"
+}
+
+.location-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 20px;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+.location-item:hover {
+    transform: scale(1.05);
+    /* Hacer que la tarjeta se agrande un 5% cuando se pasa el cursor sobre ella */
+}
+
+.location-item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+    border-radius: 20px;
+    z-index: 1;
+}
+
+.item-text-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 2;
+}
+
+.item-text-content h3 {
+    color: #ffff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 0.9rem;
+    margin-bottom: 3px;
+}
+
+.item-text-content button {
+    color: #34216b;
+    background-color: #ebe7f3;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    border-radius: 20px;
+    text-align: start;
+    padding-left: 20px;
+    width: 150px;
+    height: 32px;
+    border: #ffff 2px solid;
+}
+
+.item-text-content button:hover {
+    background-color: #ffff;
+}
+
+#lima {
+    background-image: url("https://trexperienceperu.com/sites/default/files/2022-09/lima-the-capital-of-peru.jpg");
+    grid-area: lima;
+}
+
+#piura {
+    background-image: url("https://gestion.pe/resizer/zrlBmryiqphVa_qxw99bTG4L_w8=/580x330/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/4AIT3I52CVGHHHQKXZYVQF5DE4.jpg");
+    grid-area: piura;
+}
+
+#junin {
+    background-image: url("https://elperuano.pe/fotografia//thumbnail/2023/06/01/000250857M.jpg");
+    grid-area: junin;
+}
+
+#chiclayo {
+    background-image: url("https://content.emarket.pe/common/collections/standard/26/c5/26c5654c-a8aa-4dc7-ac4c-21c00bb67fc7.jpg");
+    grid-area: chiclayo;
+}
+
+#cusco {
+    background-image: url("https://www.civitatis.com/f/peru/cusco/autobus-fiesta-cusco-589x392.jpg");
+    grid-area: cusco;
+}
+
+#arequipa {
+    background-image: url("https://media.vogue.mx/photos/5e5c4a5b25623100081c4370/16:9/w_1280,c_limit/Arequipa--paisaje.jpg");
+    grid-area: arequipa;
+}
+
+
+#team-section {
+    background-color: #ebe7f3;
+}
+
+.team-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    padding-top: 80px;
+    padding-bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.team-text-content {
+    padding: 20px;
+}
+
+.team-text-content,
+.team-image-content {
+    width: 50%;
+}
+
+.team-image-content {
+    border-radius: 26px;
+    margin: 20px;
+    height: 400px;
+    background-image: url('https://tse3.mm.bing.net/th/id/OIG4.yEA_6Y4S2JQaV6Y5ZMCi?pid=ImgGn');
+    background-size: cover;
+    background-position: center;
+}
+
+.team-image-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+.team-text-content h1 {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 2.9rem;
+    color: #34216b;
+}
+
+.team-text-content p {
+    font-family: 'Poppins', sans-serif;
+    color: #303030;
+    font-size: 1rem;
+}
+
+.team-text-content button {
+    background-color: #34216b;
+    color: white;
+    border: none;
+    padding: 9px 30px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.1s ease;
+}
+
+.team-text-content button:hover {
+    background-color: #d33f9a;
+}
+
+#data-section {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://farm5.staticflickr.com/4520/38848167192_88693dc009_h.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.data-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.data-text-content {
+    text-align: center;
+    color: #ffff;
+    margin-bottom: 40px;
+}
+
+.data-text-content h1 {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    font-weight: 400;
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+
+}
+
+.data-cards-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    border-radius: 30px;
+    margin: 0 10px;
+    gap: 3vw;
+}
+
+.data-card {
+    flex: 0 0 auto;
+    width: 250px;
+    height: 250px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+.data-card:hover {
+    transform: scale(1.05);
+}
+
+.data-card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 3rem;
+    color: #000195;
+    margin: 10px 5px;
+}
+
+.data-card p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #1b1b1b;
+    margin: 10px 5px;
+}
+
+#comments-section {
+    background-color: #ebe7f3;
+}
+
+.comments-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.comments-title {
+    padding: 2px 0;
+    color: #34216b;
+    font-size: 2rem;
+}
+
+.comments-title h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    padding: 10px
+}
+
+.comment-card ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
+    gap: 50px;
+}
+
+.comment-card ul li {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: #474747;
+}
+
+.comment-card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #2b0d85;
+    padding: 10px;
+
+}
+
+.comments-cards-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    border-radius: 30px;
+    margin: 0 10px;
+    gap: 3vw;
+}
+
+.comment-card {
+    flex: 0 0 auto;
+    width: 300px;
+    height: 400px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.comment-card:hover {
+    transform: scale(1.05);
+}
+
+.comment-card img {
+    width: 90%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 20px;
+
+
+}
+
+.comment-card button {
+    background-color: #ffffff;
+    color: #34216b;
+    border: #34216b 2px solid;
+    padding: 10px 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.comment-card button:hover {
+    background-color: #d33f9a;
+}
+
+footer {
+    background-color: #34216b;
+    color: white;
+}
+
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.footer-logo p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.footer-social i {
+    color: #ffff;
+}
+
+.footer-social ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 0;
+    gap: 20px;
+}
+
+.footer-social ul li a i {
+    font-size: 32px;
+}
+
+.footer-social ul li a i:hover {
+    color: #d33f9a;
+}
+
+.footer-navigator ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-navigator ul li a {
+    text-decoration: none;
+    color: inherit;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.footer-navigator ul li a:hover {
+    color: #d854a5;
+}
+
+
+.footer-navigator h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+.footer-contact ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-contact ul li a {
+    text-decoration: none;
+    color: inherit;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.footer-contact ul li a:hover {
+    color: #d854a5;
+}
+
+
+.footer-contact h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+    margin: 0;
 }
 
 @media screen and (max-width: 933px) {
@@ -381,9 +857,18 @@ header nav ul li a:hover {
         text-align: center;
     }
 
+    .comments-title h1 {
+        text-align: center;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 796px) {
     .menu-button {
         display: block;
     }
@@ -415,6 +900,48 @@ header nav ul li a:hover {
     header nav ul li {
         margin-bottom: 10px;
     }
+
+    .locations-items-container {
+        margin: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, 300px);
+        grid-gap: 12px;
+        grid-template-areas:
+            "lima piura"
+            "junin junin"
+            "cusco arequipa"
+            "chiclayo chiclayo";
+    }
+
+    .item-text-content button {
+        width: 100px;
+    }
+
+    .team-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-text-content,
+    .team-image-content {
+        width: 90%;
+    }
+
+    .team-text-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .team-text-content h1 {
+        text-align: center;
+    }
+
+    .team-text-content button {
+        margin: 0 auto;
+    }
+
 }
 
 @media screen and (max-width: 344px) {
